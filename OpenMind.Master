@@ -1,0 +1,106 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="OpenMind.master.cs" Inherits="OpenMind.OpenMind" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <%--Bootstrap css--%>
+    <link href="Boostrap/css/bootstrap.min.css" rel="stylesheet" />
+
+    <%--DataTable css--%>
+    <link href="datatables/css/jquery.dataTables.min.css" rel="stylesheet" />
+
+    <%--fontawesome css--%>
+    <link href="fontawesome/css/all.css" rel="stylesheet" />
+
+    <%--our custom footer--%>
+    <link href="CSS/footerStyleSheet.css" rel="stylesheet" />
+    
+    <%--jquery js--%>
+    <script src="Boostrap/js/jquery-3.3.1.slim.min.js"></script>
+
+    <%--popper js--%>
+    <script src="Boostrap/js/popper.min.js"></script>
+
+    <%--Bootstrap js--%>
+    <script src="Boostrap/js/bootstrap.min.js"></script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class ="navbar-brand" href="#">
+                    <img src="imgs/LogoBlue.jpg" width="30" height="30"/>
+                    OpenMind
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="callapse" data-
+                    target ="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-
+                    expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    
+   <%--<ul class="navbar-nav">
+       <li class="nav-item active">
+          <asp:LinkButton class="nav-link" ID="Home" runat="server">
+             Home</asp:LinkButton>
+       </li>
+   </ul>--%>
+
+    <%--<ul class="navbar-nav">
+       <li class="nav-item active">
+          <asp:LinkButton class="nav-link" ID="LogoutLink" runat="server" OnClick="LogoutLink_Click" Visible="False">
+              Logout</asp:LinkButton>
+       </li>
+   </ul>--%>
+  </div>
+
+            </nav>
+        </div>
+
+
+        <!--Main content Placeholder-->
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <!--Main content Placeholder-->
+
+        <footer>
+            <div id="footer1" class="container-fluid">
+                <div class="row">
+                    <div class="col-12 col-md-12 text-center">
+                        <p>
+                            <asp:LinkButton class="footerlimits" ID="AdminLoginLink" runat="server" OnClick="AdminLoginLink_Click">
+                                Admin Login</asp:LinkButton>
+                            &nbsp;
+                            <asp:LinkButton class="footerlimits" ID="TeacherLoginLink" runat="server" OnClick="TeacherLoginLink_Click">
+                                Teacher Login</asp:LinkButton>
+                            &nbsp;
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </footer>
+        <footer>
+            <div id="footer2" class="container-fluid">
+                <div class="row">
+                    <div class="col-12 col-md-12 text-center">
+                        <p>
+                            &copy All Rights Reserved. <a class="footerlinks" href="#" target="_blank">OpenMind</a>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </footer>
+
+    </form>
+</body>
+</html>

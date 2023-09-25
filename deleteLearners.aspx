@@ -1,0 +1,59 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/OpenMind.Master" AutoEventWireup="true" CodeBehind="deleteLearners.aspx.cs" Inherits="OpenMind.deleteLearners" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mx-auto">
+                 <div class="card">
+                     <div class="card-body">
+                            <div class="row">
+                             <div class="col">
+                                 <center>
+                                     <img width="150" height="150px" src="imgs/learner.png" />
+                                 </center>
+                                     
+                             </div>
+                                </div>
+                        
+                          <br />
+                         <div class="row">
+                             <div class="col">
+                                 <center>
+                                     <h3>Delete Learner Details</h3>
+                                 </center>
+                                    
+                             </div>
+                         </div>
+
+                          <div class="row">
+                             <div class="col">
+                               <hr/>
+                             </div>
+                         </div>
+
+                         <div class="row">
+                              <div class="col-md-5">
+                               <label>Learner ID</label>
+                                 <div class="form-group">
+                                     <asp:TextBox CssClass="form-control" ID="learnerIDTxtBox" 
+                                         runat="server" placeholder="Learner ID" TextMode="SingleLine"></asp:TextBox>
+                                     <asp:RequiredFieldValidator ID="learnerIDValidator" runat="server" ControlToValidate="learnerIDTxtBox" ErrorMessage="Please Enter The Learner ID" Font-Bold="True" ForeColor="Red"></asp:RequiredFieldValidator>
+                                 </div>
+                             </div>
+                         </div>
+                         <br />
+                           <div class="row">
+                             <div class="col">
+                                  <div class="form-group">
+                                      <asp:Button class="btn btn-primary btn-block"  ID="dltLnrBtn" runat="server" Text="Delete" OnClick="dltLnrBtn_Click" />
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                </div>
+                 <a href="maintainLearners.aspx">Back to manage page </a><br /><br />
+            </div>
+        </div>
+    </div>
+</asp:Content>
